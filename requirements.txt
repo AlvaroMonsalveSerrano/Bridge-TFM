@@ -1,0 +1,19 @@
+# dev/tests
+pytest
+pytest-icdiff
+
+mypy # Para definir tipos.
+pytype # Para definir tipos.
+
+pylint # Para la comprobación del estilo de código.
+
+git+https://github.com/psf/black
+
+requests
+redis
+tenacity
+
+
+boto3
+dataclasses
+Flask

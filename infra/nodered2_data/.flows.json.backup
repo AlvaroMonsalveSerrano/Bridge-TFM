@@ -99,6 +99,20 @@
         "sessionExpiry": ""
     },
     {
+        "id": "0bcf57a68d6eff7b",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB-Docker",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxDB:8086",
+        "rejectUnauthorized": true
+    },
+    {
         "id": "3cc11d24.ff01a2",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
@@ -2453,26 +2467,9 @@
         "y": 200,
         "wires": [
             [
-                "233daff91e8c6c0e"
+                "43d12d9c539d0cf3"
             ]
         ]
-    },
-    {
-        "id": "233daff91e8c6c0e",
-        "type": "debug",
-        "z": "32fa710f8ce72da8",
-        "name": "TopicEsp32Mosquitto",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "17673061bbef68f8",
@@ -2498,8 +2495,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c8b203d85105f0cf",
-        "x": 540,
-        "y": 320,
+        "x": 600,
+        "y": 500,
         "wires": []
     },
     {
@@ -2521,14 +2518,91 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 200,
-        "y": 320,
+        "payload": "NodeRed-Test",
+        "payloadType": "str",
+        "x": 260,
+        "y": 500,
         "wires": [
             [
                 "57a43a4f01ec4c17"
             ]
         ]
+    },
+    {
+        "id": "dd8f425e0807e9fb",
+        "type": "influxdb out",
+        "z": "32fa710f8ce72da8",
+        "influxdb": "0bcf57a68d6eff7b",
+        "name": "InfluxDB-Docker-Node",
+        "measurement": "binomio1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "org-tfm",
+        "bucket": "bucket-tfm",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "43d12d9c539d0cf3",
+        "type": "change",
+        "z": "32fa710f8ce72da8",
+        "name": "Binomio1-Bombero1-Oxigeno",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fields.oxigeno",
+                "pt": "msg",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "tags.bombero1",
+                "pt": "msg",
+                "to": "Pablo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$append(fields, tags)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "c6065e70938e7804",
+                "dd8f425e0807e9fb"
+            ]
+        ]
+    },
+    {
+        "id": "c6065e70938e7804",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "TestChange",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 120,
+        "wires": []
     }
 ]

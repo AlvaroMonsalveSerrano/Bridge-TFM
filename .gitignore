@@ -1,3 +1,6 @@
 .DS_Store
 
 .venv
+
+infra/Mosquitto/log/mosquitto.log
+*.log

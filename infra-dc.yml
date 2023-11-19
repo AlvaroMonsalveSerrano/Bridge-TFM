@@ -49,9 +49,11 @@ services:
       - DOCKER_INFLUXDB_INIT_MODE=setup
       - DOCKER_INFLUXDB_INIT_USERNAME=root
       - DOCKER_INFLUXDB_INIT_PASSWORD=secret-password
-      - DOCKER_INFLUXDB_INIT_ORG=my-init-org
-      - DOCKER_INFLUXDB_INIT_BUCKET=my-init-bucket
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=d-HNOy8HQ75poE3xswipW3QqQzNgKkYeK3MfoZmRv_zLSQMsnnM6na_a4nG62mXt4UudqZxBefNutITB0qojdQ== \
+      - DOCKER_INFLUXDB_INIT_ORG=org-tfm
+      - DOCKER_INFLUXDB_INIT_BUCKET=bucket-tfm
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=6_nXNZk2yq1wvz45j6XM5J75X25OXRXW68QgIOCG7-QgFqwc5MJLRwUHPriHfh4_kggcZdvbCGfzBiFV2kEnFQ==
+
+
 
     ports:
       - "8086:8086"
@@ -70,9 +72,12 @@ services:
 
     networks:
       - edge-net
+      - platformiot
 
     volumes:
       - $PWD/infra/grafana/data:/var/lib/grafana
+
+    user: "0"  
 
   app:
     container_name: app 
@@ -82,9 +87,11 @@ services:
 
     networks:
       - edge-net
+      - platformiot
 
 volumes:
   edge-data:
 
 networks:
   edge-net:
+  platformiot:

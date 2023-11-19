@@ -54,7 +54,7 @@ build:
 
 .PHONY: up
 up:
-	docker-compose -f infra-dc.yml -p miPrototipo up -d
+	docker-compose -f infra-dc.yml -p miPrototipo up -d --force-recreate
 
 .PHONY: start
 start:

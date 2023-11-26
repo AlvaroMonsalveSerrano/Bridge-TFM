@@ -5,7 +5,7 @@ import paho.mqtt.client as mqtt
 from exceptions.services_exception import ServiceException
 
 #
-broker_address = "localhost"
+broker_address = "mosquitto"
 topic_alarm1 = "app/binomio1/alarm1"
 topic_alarm2 = "app/binomio1/alarm2"
 topic_alarm3 = "app/binomio1/alarm3"

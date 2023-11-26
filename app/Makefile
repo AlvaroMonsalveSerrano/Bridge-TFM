@@ -2,19 +2,22 @@
 # Makefile. Definición del fichero makefile para trabajar exclusivamente con el app 
 # Python utilizando Python.
 #
+.PHONY: build
 build:
-	docker image build -t alvaroms/template-microservice:v1.0 .
+	docker image build -t alvaroms/tfm:v1.0 .
 
+.PHONY: run
 run:
-	docker container run -d --name template-microservice -p 6060:80 alvaroms/template-microservice:v1.0
+	docker container run -d --name tfm-local -p 6060:80 alvaroms/tfm:v1.0
 
+.PHONY: exec
 exec:
-	docker container exec -it template-microservice /bin/sh
+	docker container exec -it tfm-local /bin/sh
 
+.PHONY: logs
 logs:
-	docker container logs template-microservice
+	docker container logs tfm-local
 
-test:
-	pytest --setup-show
 
-all: test build run
+.PHONY: all
+all:  build run

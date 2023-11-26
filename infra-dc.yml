@@ -81,7 +81,7 @@ services:
 
   app:
     container_name: app 
-    image: alvaroms/tfm-app:v1.0
+    image: alvaroms/tfm:v1.0
     ports:
       - "6060:80"
 

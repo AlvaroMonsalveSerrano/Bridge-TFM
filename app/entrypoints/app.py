@@ -18,9 +18,9 @@ import uuid
 import logging
 
 from flask import Flask, jsonify, request, current_app
-from domain import entity_model
-from repository import use_case_repository
-from services import use_case_service
+from services import app_service 
+from exceptions.services_exception import ServiceException
+
 
 app = Flask(__name__)
 
@@ -57,37 +57,72 @@ def rediness():
     return 'Ok', 200
 
 
-@app.route("/use_case_example", methods=['POST'])
-def do_use_case_example():
+@app.route("/alarm1", methods=['GET'])
+def doAlarm1():
     """
-    use case example
+    Alarm1 entrypoint
+    :return: str, código error. (510- Error de servicio de negocio)
+    """
 
-    curl --header "Content-Type: application/json" --request POST \
-         --data '{"name":"xyz1", "operation":"+", "operator":"20"}' \
-         http://localhost:5000/use_case_example
+    response_result = None
+    code_result = 0
+    try:
+        current_app.logger.info(f"[*] /alarm1")
+        app_service.setAlarm1()
+        response_result = {'result': 'Ok'}
+        code_result = 200
+    
+    except ServiceException as service_exception:
+        response_result = {'result': 'Ko', 'error': str(service_exception)}
+        code_result = 510        
 
+    return jsonify(response_result), code_result
+
+
+@app.route("/alarm2", methods=['GET'])
+def doAlarm2():
+    """
+    Alarm1 entrypoint
     :return: str
     """
-    p_name = request.json['name']
-    p_operation = request.json['operation']
-    p_operator = int(request.json['operator'])
-    current_app.logger.info(f"[*] /use_case_example")
-    current_app.logger.info(f"[*] Request: Name={p_name} operation={p_operation} operator={p_operator}")
 
-    current_app.logger.info(f"Name={p_name} operation={p_operation} operator={p_operator}")
+    response_result = None
+    code_result = 0
+    try:
 
-    data_request = entity_model.UseCaseRequest(uuid=uuid.UUID,
-                                               name=p_name,
-                                               operation=p_operation,
-                                               operator=p_operator)
+        current_app.logger.info(f"[*] /alarm2")
+        app_service.setAlarm2()
+        response_result = {'result': 'Ok'}
+        code_result = 200
 
-    repository = use_case_repository.UseCaseRepository()
-    response_use_case = use_case_service.do_something(data_request, repository)
+    except ServiceException as service_exception:
+        response_result = {'result': 'Ko', 'error': str(service_exception)}
+        code_result = 510        
 
-    data = jsonify({'result': response_use_case.resul})
+    return jsonify(response_result), code_result
 
-    return data, 200
 
+@app.route("/alarm3", methods=['GET'])
+def doAlarm3():
+    """
+    Alarm3 entrypoint
+    :return: str
+    """
+
+    response_result = None
+    code_result = 0
+    try:
+
+        current_app.logger.info(f"[*] /alarm3")
+        app_service.setAlarm3()
+        response_result = {'result': 'Ok'}
+        code_result = 200
+
+    except ServiceException as service_exception:
+        response_result = {'result': 'Ko', 'error': str(service_exception)}
+        code_result = 510        
+
+    return jsonify(response_result), code_result
 
 if __name__ == '__main__':
     app.run(debug=True)

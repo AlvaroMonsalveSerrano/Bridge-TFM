@@ -2495,8 +2495,8 @@
         "correl": "",
         "expiry": "",
         "broker": "c8b203d85105f0cf",
-        "x": 600,
-        "y": 500,
+        "x": 540,
+        "y": 700,
         "wires": []
     },
     {
@@ -2520,8 +2520,8 @@
         "topic": "",
         "payload": "NodeRed-Test",
         "payloadType": "str",
-        "x": 260,
-        "y": 500,
+        "x": 200,
+        "y": 700,
         "wires": [
             [
                 "57a43a4f01ec4c17"
@@ -2603,6 +2603,130 @@
         "statusType": "auto",
         "x": 850,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "35b62fed19fd5a94",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "4af52783de998006"
+            ]
+        ]
+    },
+    {
+        "id": "4af52783de998006",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ddfb0c033952a7d6",
+        "type": "comment",
+        "z": "32fa710f8ce72da8",
+        "name": "App Binomio1 (Alarm1, Alarm2)",
+        "info": "Flujo para el envío de una alarma1 al controlador \ndel binomio1",
+        "x": 250,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7344ebaf33b44248",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "daf178294969f807"
+            ]
+        ]
+    },
+    {
+        "id": "daf178294969f807",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8f746c188815190f",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "6ebbe6f1ebfdb391"
+            ]
+        ]
+    },
+    {
+        "id": "6ebbe6f1ebfdb391",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 600,
         "wires": []
     }
 ]

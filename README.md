@@ -50,10 +50,13 @@ Para acceder al interfaz de Nodered se accede a través de la siguiente URL: **h
 ## App 
 
 La aplicación definida en la carpeta app define una aplciación con arquitectura de microservicios la cual
-tiene la funcionalidad de definer los actuadores sobre los diferentes dispositivos y sistemas.
+tiene la funcionalidad de definer una API con los endpoints para actuar sobre las placas controladoras.
 
-La arquitctura que se define es una arquitectura de tres capas con los elementos necesarios para arrancarla 
+La arquitectura que se define es una arquitectura en capas con los elementos necesarios para arrancarla 
 en un contenedor Docker.
+
+Para la ejecución del contenedor docker de la aplicación en docker compose, es necesario crear la imagen 
+de la aplicación para que, al levantar el docker-compose, la imagen esté creada.
 
 ## Comandos de despliegue.
 

@@ -1225,3 +1225,332 @@
 1701020701: New connection from 172.23.0.5:33091 on port 1883.
 1701020701: New client connected from 172.23.0.5:33091 as Client MQTT (p2, c1, k60).
 1701020701: Client Client MQTT closed its connection.
+1701022201: New connection from 192.168.1.184:59390 on port 1883.
+1701022201: New client connected from 192.168.1.184:59390 as ESP8266Client_1 (p2, c1, k15).
+1701022211: New connection from 192.168.1.184:49440 on port 1883.
+1701022211: Client ESP8266Client_1 already connected, closing old connection.
+1701022211: New client connected from 192.168.1.184:49440 as ESP8266Client_1 (p2, c1, k15).
+1701022456: New connection from 192.168.1.184:50635 on port 1883.
+1701022456: Client ESP8266Client_1 already connected, closing old connection.
+1701022456: New client connected from 192.168.1.184:50635 as ESP8266Client_1 (p2, c1, k15).
+1701022483: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701022655: New connection from 192.168.1.184:49255 on port 1883.
+1701022655: Client ESP8266Client_1 already connected, closing old connection.
+1701022655: New client connected from 192.168.1.184:49255 as ESP8266Client_1 (p2, c1, k15).
+1701022755: New connection from 192.168.1.184:54795 on port 1883.
+1701022755: Client ESP8266Client_1 already connected, closing old connection.
+1701022755: New client connected from 192.168.1.184:54795 as ESP8266Client_1 (p2, c1, k15).
+1701022812: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701023346: New connection from 192.168.1.184:50106 on port 1883.
+1701023346: New client connected from 192.168.1.184:50106 as ESP8266Client_1 (p2, c1, k15).
+1701023358: New connection from 192.168.1.184:56042 on port 1883.
+1701023358: Client ESP8266Client_1 already connected, closing old connection.
+1701023358: New client connected from 192.168.1.184:56042 as ESP8266Client_1 (p2, c1, k15).
+1701023404: New connection from 192.168.1.184:55279 on port 1883.
+1701023404: Client ESP8266Client_1 already connected, closing old connection.
+1701023404: New client connected from 192.168.1.184:55279 as ESP8266Client_1 (p2, c1, k15).
+1701023916: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701023924: New connection from 192.168.1.184:49835 on port 1883.
+1701023924: New client connected from 192.168.1.184:49835 as ESP8266Client_1 (p2, c1, k15).
+1701024066: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701024066: New connection from 192.168.1.184:61983 on port 1883.
+1701024066: New client connected from 192.168.1.184:61983 as ESP8266Client_1 (p2, c1, k15).
+1701024221: mosquitto version 2.0.18 terminating
+1701024221: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701024223: mosquitto version 2.0.18 starting
+1701024223: Config loaded from /mosquitto/config/mosquitto.conf.
+1701024223: Opening ipv4 listen socket on port 1883.
+1701024223: mosquitto version 2.0.18 running
+1701024226: New connection from 192.168.1.184:61985 on port 1883.
+1701024226: New client connected from 192.168.1.184:61985 as ESP8266Client_1 (p2, c1, k15).
+1701024227: New connection from 172.23.0.3:35100 on port 1883.
+1701024227: New client connected from 172.23.0.3:35100 as nodered_d104416a336151b1 (p1, c1, k60).
+1701024293: New connection from 192.168.1.184:55022 on port 1883.
+1701024293: Client ESP8266Client_1 already connected, closing old connection.
+1701024293: New client connected from 192.168.1.184:55022 as ESP8266Client_1 (p2, c1, k15).
+1701024302: New connection from 172.23.0.6:51073 on port 1883.
+1701024302: New client connected from 172.23.0.6:51073 as Client MQTT (p2, c1, k60).
+1701024302: Client Client MQTT closed its connection.
+1701024565: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701024571: New connection from 192.168.1.184:51055 on port 1883.
+1701024571: New client connected from 192.168.1.184:51055 as ESP8266Client_1 (p2, c1, k15).
+1701024578: New connection from 172.23.0.6:60331 on port 1883.
+1701024578: New client connected from 172.23.0.6:60331 as Client MQTT (p2, c1, k60).
+1701024578: Client Client MQTT closed its connection.
+1701024671: New connection from 192.168.1.184:50327 on port 1883.
+1701024671: Client ESP8266Client_1 already connected, closing old connection.
+1701024671: New client connected from 192.168.1.184:50327 as ESP8266Client_1 (p2, c1, k15).
+1701024682: New connection from 172.23.0.6:36103 on port 1883.
+1701024682: New client connected from 172.23.0.6:36103 as Client MQTT (p2, c1, k60).
+1701024682: Client Client MQTT closed its connection.
+1701024697: New connection from 172.23.0.6:34067 on port 1883.
+1701024697: New client connected from 172.23.0.6:34067 as Client MQTT (p2, c1, k60).
+1701024697: Client Client MQTT closed its connection.
+1701024808: New connection from 192.168.1.184:53213 on port 1883.
+1701024808: Client ESP8266Client_1 already connected, closing old connection.
+1701024808: New client connected from 192.168.1.184:53213 as ESP8266Client_1 (p2, c1, k15).
+1701024812: New connection from 172.23.0.6:43551 on port 1883.
+1701024812: New client connected from 172.23.0.6:43551 as Client MQTT (p2, c1, k60).
+1701024812: Client Client MQTT closed its connection.
+1701024823: New connection from 172.23.0.6:43441 on port 1883.
+1701024823: New client connected from 172.23.0.6:43441 as Client MQTT (p2, c1, k60).
+1701024823: Client Client MQTT closed its connection.
+1701024973: New connection from 192.168.1.184:51120 on port 1883.
+1701024973: Client ESP8266Client_1 already connected, closing old connection.
+1701024973: New client connected from 192.168.1.184:51120 as ESP8266Client_1 (p2, c1, k15).
+1701024977: New connection from 172.23.0.6:40537 on port 1883.
+1701024977: New client connected from 172.23.0.6:40537 as Client MQTT (p2, c1, k60).
+1701024977: Client Client MQTT closed its connection.
+1701024985: New connection from 172.23.0.6:37747 on port 1883.
+1701024985: New client connected from 172.23.0.6:37747 as Client MQTT (p2, c1, k60).
+1701024985: Client Client MQTT closed its connection.
+1701024996: New connection from 172.23.0.6:59543 on port 1883.
+1701024996: New client connected from 172.23.0.6:59543 as Client MQTT (p2, c1, k60).
+1701024996: Client Client MQTT closed its connection.
+1701025005: New connection from 172.23.0.6:54497 on port 1883.
+1701025005: New client connected from 172.23.0.6:54497 as Client MQTT (p2, c1, k60).
+1701025005: Client Client MQTT closed its connection.
+1701025159: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701025164: New connection from 192.168.1.184:64216 on port 1883.
+1701025164: New client connected from 192.168.1.184:64216 as ESP8266Client_1 (p2, c1, k15).
+1701025175: New connection from 172.23.0.6:51633 on port 1883.
+1701025175: New client connected from 172.23.0.6:51633 as Client MQTT (p2, c1, k60).
+1701025175: Client Client MQTT closed its connection.
+1701025260: New connection from 192.168.1.184:57462 on port 1883.
+1701025260: Client ESP8266Client_1 already connected, closing old connection.
+1701025260: New client connected from 192.168.1.184:57462 as ESP8266Client_1 (p2, c1, k15).
+1701025264: New connection from 172.23.0.6:60029 on port 1883.
+1701025264: New client connected from 172.23.0.6:60029 as Client MQTT (p2, c1, k60).
+1701025264: Client Client MQTT disconnected.
+1701025272: New connection from 172.23.0.6:58753 on port 1883.
+1701025272: New client connected from 172.23.0.6:58753 as Client MQTT (p2, c1, k60).
+1701025272: Client Client MQTT closed its connection.
+1701025284: New connection from 172.23.0.6:43787 on port 1883.
+1701025284: New client connected from 172.23.0.6:43787 as Client MQTT (p2, c1, k60).
+1701025284: Client Client MQTT closed its connection.
+1701025448: New connection from 172.23.0.1:40026 on port 1883.
+1701025448: New client connected from 172.23.0.1:40026 as auto-A8223EBD-E94A-4CEA-AFD8-8F0510B6A6B7 (p2, c1, k60).
+1701025456: Client auto-A8223EBD-E94A-4CEA-AFD8-8F0510B6A6B7 disconnected.
+1701025459: New connection from 172.23.0.1:33176 on port 1883.
+1701025459: New client connected from 172.23.0.1:33176 as auto-26BC4155-8B69-2CC3-1C91-61233F3D03EF (p2, c1, k60).
+1701025490: Client auto-26BC4155-8B69-2CC3-1C91-61233F3D03EF disconnected.
+1701025522: New connection from 172.23.0.1:56512 on port 1883.
+1701025522: New client connected from 172.23.0.1:56512 as auto-81B43F68-0DB2-6308-7ACD-2EF5EFF747B5 (p2, c1, k60).
+1701025524: New connection from 172.23.0.6:40547 on port 1883.
+1701025524: New client connected from 172.23.0.6:40547 as Client MQTT (p2, c1, k60).
+1701025524: Client Client MQTT closed its connection.
+1701025551: New connection from 172.23.0.1:42306 on port 1883.
+1701025551: New client connected from 172.23.0.1:42306 as auto-A4226F79-FCCB-4040-7AB8-2F7D88AE8335 (p2, c1, k60).
+1701025557: New connection from 172.23.0.6:47897 on port 1883.
+1701025557: New client connected from 172.23.0.6:47897 as Client MQTT (p2, c1, k60).
+1701025557: Client Client MQTT closed its connection.
+1701025571: New connection from 172.23.0.6:43501 on port 1883.
+1701025571: New client connected from 172.23.0.6:43501 as Client MQTT (p2, c1, k60).
+1701025571: Client Client MQTT closed its connection.
+1701025699: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701025705: New connection from 192.168.1.184:61805 on port 1883.
+1701025705: New client connected from 192.168.1.184:61805 as ESP8266Client_1 (p2, c1, k15).
+1701025714: New connection from 172.23.0.6:44857 on port 1883.
+1701025714: New client connected from 172.23.0.6:44857 as Client MQTT (p2, c1, k60).
+1701025714: Client Client MQTT closed its connection.
+1701025723: New connection from 172.23.0.6:42895 on port 1883.
+1701025723: New client connected from 172.23.0.6:42895 as Client MQTT (p2, c1, k60).
+1701025723: Client Client MQTT closed its connection.
+1701025736: New connection from 172.23.0.6:33873 on port 1883.
+1701025736: New client connected from 172.23.0.6:33873 as Client MQTT (p2, c1, k60).
+1701025736: Client Client MQTT closed its connection.
+1701025757: New connection from 172.23.0.6:48395 on port 1883.
+1701025757: New client connected from 172.23.0.6:48395 as Client MQTT (p2, c1, k60).
+1701025757: Client Client MQTT closed its connection.
+1701025870: mosquitto version 2.0.18 terminating
+1701025870: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701188126: mosquitto version 2.0.18 starting
+1701188126: Config loaded from /mosquitto/config/mosquitto.conf.
+1701188126: Opening ipv4 listen socket on port 1883.
+1701188126: mosquitto version 2.0.18 running
+1701188129: New connection from 192.168.1.136:54220 on port 1883.
+1701188129: New client connected from 192.168.1.136:54220 as ESP8266Client_1 (p2, c1, k15).
+1701188129: New connection from 172.18.0.4:50850 on port 1883.
+1701188129: New client connected from 172.18.0.4:50850 as nodered_b7240636bcc6f492 (p1, c1, k60).
+1701188254: New connection from 172.18.0.6:53343 on port 1883.
+1701188254: New client connected from 172.18.0.6:53343 as Client MQTT (p2, c1, k60).
+1701188254: Client Client MQTT closed its connection.
+1701188308: New connection from 172.18.0.6:43857 on port 1883.
+1701188308: New client connected from 172.18.0.6:43857 as Client MQTT (p2, c1, k60).
+1701188308: Client Client MQTT closed its connection.
+1701188312: New connection from 172.18.0.6:55731 on port 1883.
+1701188312: New client connected from 172.18.0.6:55731 as Client MQTT (p2, c1, k60).
+1701188312: Client Client MQTT closed its connection.
+1701188315: New connection from 172.18.0.6:45259 on port 1883.
+1701188315: New client connected from 172.18.0.6:45259 as Client MQTT (p2, c1, k60).
+1701188315: Client Client MQTT closed its connection.
+1701188377: New connection from 172.18.0.6:51281 on port 1883.
+1701188377: New client connected from 172.18.0.6:51281 as Client MQTT (p2, c1, k60).
+1701188377: Client Client MQTT disconnected.
+1701188516: New connection from 172.18.0.6:56903 on port 1883.
+1701188516: New client connected from 172.18.0.6:56903 as Client MQTT (p2, c1, k60).
+1701188516: Client Client MQTT closed its connection.
+1701188523: New connection from 172.18.0.6:44135 on port 1883.
+1701188523: New client connected from 172.18.0.6:44135 as Client MQTT (p2, c1, k60).
+1701188523: Client Client MQTT closed its connection.
+1701188527: New connection from 172.18.0.6:59923 on port 1883.
+1701188527: New client connected from 172.18.0.6:59923 as Client MQTT (p2, c1, k60).
+1701188527: Client Client MQTT disconnected.
+1701188934: New connection from 172.18.0.6:50261 on port 1883.
+1701188934: New client connected from 172.18.0.6:50261 as Client MQTT (p2, c1, k60).
+1701188934: Client Client MQTT closed its connection.
+1701189182: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701189182: New connection from 192.168.1.136:57455 on port 1883.
+1701189182: New client connected from 192.168.1.136:57455 as ESP8266Client_1 (p2, c1, k15).
+1701189269: New connection from 192.168.1.136:64329 on port 1883.
+1701189269: Client ESP8266Client_1 already connected, closing old connection.
+1701189269: New client connected from 192.168.1.136:64329 as ESP8266Client_1 (p2, c1, k15).
+1701189363: New connection from 192.168.1.136:55709 on port 1883.
+1701189363: Client ESP8266Client_1 already connected, closing old connection.
+1701189363: New client connected from 192.168.1.136:55709 as ESP8266Client_1 (p2, c1, k15).
+1701189927: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701191728: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701192932: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701193091: New connection from 192.168.1.136:60916 on port 1883.
+1701193091: New client connected from 192.168.1.136:60916 as ESP8266Client_1 (p2, c1, k15).
+1701193141: New connection from 192.168.1.136:63429 on port 1883.
+1701193141: Client ESP8266Client_1 already connected, closing old connection.
+1701193141: New client connected from 192.168.1.136:63429 as ESP8266Client_1 (p2, c1, k15).
+1701193244: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701193252: New connection from 192.168.1.136:55506 on port 1883.
+1701193252: New client connected from 192.168.1.136:55506 as ESP8266Client_1 (p2, c1, k15).
+1701193396: New connection from 192.168.1.136:54006 on port 1883.
+1701193396: Client ESP8266Client_1 already connected, closing old connection.
+1701193396: New client connected from 192.168.1.136:54006 as ESP8266Client_1 (p2, c1, k15).
+1701193467: New connection from 192.168.1.136:62752 on port 1883.
+1701193467: Client ESP8266Client_1 already connected, closing old connection.
+1701193467: New client connected from 192.168.1.136:62752 as ESP8266Client_1 (p2, c1, k15).
+1701193529: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701193610: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701193611: New connection from 192.168.1.136:64951 on port 1883.
+1701193611: New client connected from 192.168.1.136:64951 as ESP8266Client_1 (p2, c1, k15).
+1701193863: New connection from 172.18.0.6:49971 on port 1883.
+1701193863: New client connected from 172.18.0.6:49971 as Client MQTT (p2, c1, k60).
+1701193863: Client Client MQTT closed its connection.
+1701193868: New connection from 172.18.0.6:54497 on port 1883.
+1701193868: New client connected from 172.18.0.6:54497 as Client MQTT (p2, c1, k60).
+1701193868: Client Client MQTT disconnected.
+1701193874: New connection from 172.18.0.6:44525 on port 1883.
+1701193874: New client connected from 172.18.0.6:44525 as Client MQTT (p2, c1, k60).
+1701193874: Client Client MQTT closed its connection.
+1701193889: New connection from 172.18.0.6:48557 on port 1883.
+1701193889: New client connected from 172.18.0.6:48557 as Client MQTT (p2, c1, k60).
+1701193889: Client Client MQTT closed its connection.
+1701193895: New connection from 172.18.0.6:47043 on port 1883.
+1701193895: New client connected from 172.18.0.6:47043 as Client MQTT (p2, c1, k60).
+1701193895: Client Client MQTT closed its connection.
+1701193899: New connection from 172.18.0.6:45055 on port 1883.
+1701193899: New client connected from 172.18.0.6:45055 as Client MQTT (p2, c1, k60).
+1701193899: Client Client MQTT closed its connection.
+1701193924: New connection from 172.18.0.6:52089 on port 1883.
+1701193924: New client connected from 172.18.0.6:52089 as Client MQTT (p2, c1, k60).
+1701193924: Client Client MQTT closed its connection.
+1701193951: New connection from 172.18.0.6:41295 on port 1883.
+1701193951: New client connected from 172.18.0.6:41295 as Client MQTT (p2, c1, k60).
+1701193951: Client Client MQTT closed its connection.
+1701193983: New connection from 172.18.0.6:35951 on port 1883.
+1701193983: New client connected from 172.18.0.6:35951 as Client MQTT (p2, c1, k60).
+1701193983: Client Client MQTT closed its connection.
+1701193991: New connection from 172.18.0.6:42163 on port 1883.
+1701193991: New client connected from 172.18.0.6:42163 as Client MQTT (p2, c1, k60).
+1701193991: Client Client MQTT closed its connection.
+1701194050: New connection from 172.18.0.6:48479 on port 1883.
+1701194050: New client connected from 172.18.0.6:48479 as Client MQTT (p2, c1, k60).
+1701194050: Client Client MQTT closed its connection.
+1701194070: New connection from 172.18.0.6:44197 on port 1883.
+1701194070: New client connected from 172.18.0.6:44197 as Client MQTT (p2, c1, k60).
+1701194070: Client Client MQTT closed its connection.
+1701194105: New connection from 172.18.0.6:40591 on port 1883.
+1701194105: New client connected from 172.18.0.6:40591 as Client MQTT (p2, c1, k60).
+1701194105: Client Client MQTT disconnected.
+1701194124: New connection from 172.18.0.6:52781 on port 1883.
+1701194124: New client connected from 172.18.0.6:52781 as Client MQTT (p2, c1, k60).
+1701194124: Client Client MQTT closed its connection.
+1701194145: New connection from 172.18.0.6:43975 on port 1883.
+1701194145: New client connected from 172.18.0.6:43975 as Client MQTT (p2, c1, k60).
+1701194145: Client Client MQTT closed its connection.
+1701194168: New connection from 172.18.0.6:48249 on port 1883.
+1701194168: New client connected from 172.18.0.6:48249 as Client MQTT (p2, c1, k60).
+1701194168: Client Client MQTT closed its connection.
+1701194171: New connection from 172.18.0.6:47371 on port 1883.
+1701194171: New client connected from 172.18.0.6:47371 as Client MQTT (p2, c1, k60).
+1701194171: Client Client MQTT closed its connection.
+1701194179: New connection from 172.18.0.6:37765 on port 1883.
+1701194179: New client connected from 172.18.0.6:37765 as Client MQTT (p2, c1, k60).
+1701194179: Client Client MQTT closed its connection.
+1701194188: New connection from 172.18.0.6:56863 on port 1883.
+1701194188: New client connected from 172.18.0.6:56863 as Client MQTT (p2, c1, k60).
+1701194188: Client Client MQTT closed its connection.
+1701194201: New connection from 172.18.0.6:40391 on port 1883.
+1701194201: New client connected from 172.18.0.6:40391 as Client MQTT (p2, c1, k60).
+1701194201: Client Client MQTT closed its connection.
+1701194220: New connection from 172.18.0.6:56499 on port 1883.
+1701194220: New client connected from 172.18.0.6:56499 as Client MQTT (p2, c1, k60).
+1701194220: Client Client MQTT closed its connection.
+1701194227: New connection from 172.18.0.6:55683 on port 1883.
+1701194227: New client connected from 172.18.0.6:55683 as Client MQTT (p2, c1, k60).
+1701194227: Client Client MQTT closed its connection.
+1701194251: New connection from 172.18.0.6:56403 on port 1883.
+1701194251: New client connected from 172.18.0.6:56403 as Client MQTT (p2, c1, k60).
+1701194251: Client Client MQTT closed its connection.
+1701194360: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701194367: New connection from 192.168.1.136:50961 on port 1883.
+1701194367: New client connected from 192.168.1.136:50961 as ESP8266Client_1 (p2, c1, k15).
+1701194382: New connection from 172.18.0.6:42997 on port 1883.
+1701194382: New client connected from 172.18.0.6:42997 as Client MQTT (p2, c1, k60).
+1701194382: Client Client MQTT closed its connection.
+1701194395: New connection from 172.18.0.6:48803 on port 1883.
+1701194395: New client connected from 172.18.0.6:48803 as Client MQTT (p2, c1, k60).
+1701194395: Client Client MQTT closed its connection.
+1701194406: New connection from 172.18.0.6:56755 on port 1883.
+1701194406: New client connected from 172.18.0.6:56755 as Client MQTT (p2, c1, k60).
+1701194406: Client Client MQTT closed its connection.
+1701194522: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701194574: mosquitto version 2.0.18 terminating
+1701194574: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701276016: mosquitto version 2.0.18 starting
+1701276016: Config loaded from /mosquitto/config/mosquitto.conf.
+1701276016: Opening ipv4 listen socket on port 1883.
+1701276016: mosquitto version 2.0.18 running
+1701276019: New connection from 172.18.0.4:37386 on port 1883.
+1701276019: New client connected from 172.18.0.4:37386 as nodered_85e529ddbaf6719d (p1, c1, k60).
+1701277817: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701279618: mosquitto version 2.0.18 terminating
+1701279618: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701538708: mosquitto version 2.0.18 starting
+1701538708: Config loaded from /mosquitto/config/mosquitto.conf.
+1701538708: Opening ipv4 listen socket on port 1883.
+1701538708: mosquitto version 2.0.18 running
+1701538714: New connection from 172.18.0.4:52156 on port 1883.
+1701538714: New client connected from 172.18.0.4:52156 as nodered_9e2eae5341654f34 (p1, c1, k60).
+1701540508: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701540744: mosquitto version 2.0.18 terminating
+1701540744: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701540752: mosquitto version 2.0.18 starting
+1701540752: Config loaded from /mosquitto/config/mosquitto.conf.
+1701540752: Opening ipv4 listen socket on port 1883.
+1701540752: mosquitto version 2.0.18 running
+1701540755: New connection from 172.20.0.4:36208 on port 1883.
+1701540755: New client connected from 172.20.0.4:36208 as nodered_30b576cfd11b5a82 (p1, c1, k60).
+1701541041: New connection from 192.168.1.150:49159 on port 1883.
+1701541041: New client connected from 192.168.1.150:49159 as ESP8266Client_1 (p2, c1, k15).
+1701542552: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701544353: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701544657: mosquitto version 2.0.18 terminating
+1701544657: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701544660: mosquitto version 2.0.18 starting
+1701544660: Config loaded from /mosquitto/config/mosquitto.conf.
+1701544660: Opening ipv4 listen socket on port 1883.
+1701544660: mosquitto version 2.0.18 running
+1701544663: New connection from 172.20.0.4:59944 on port 1883.
+1701544663: New client connected from 172.20.0.4:59944 as nodered_316a2578f4f45101 (p1, c1, k60).
+1701544664: New connection from 192.168.1.150:49161 on port 1883.
+1701544664: New client connected from 192.168.1.150:49161 as ESP8266Client_1 (p2, c1, k15).
+1701544726: Client nodered_316a2578f4f45101 disconnected.
+1701544726: mosquitto version 2.0.18 terminating
+1701544726: Saving in-memory database to /mosquitto/data//mosquitto.db.

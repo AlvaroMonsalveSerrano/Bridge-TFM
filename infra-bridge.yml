@@ -1,0 +1,74 @@
+################################################################################
+# Node-RED Stack or Compose
+################################################################################
+# docker stack deploy node-red --compose-file docker-compose-node-red.yml
+# docker-compose -f docker-compose-node-red.yml -p myNoderedProject up
+################################################################################
+version: "3.7"
+
+services:
+  nodered:
+    container_name: nodered
+#    image: nodered/node-red:latest
+    image: nodered/node-red:1.3.4-12-arm32v7
+    environment:
+      - TZ=Europe/Madrid
+    ports:
+      - "1881:1880"
+    networks:
+      - edge-net
+    volumes:
+      - $PWD/infra/nodered:/data
+
+  mosquitto:
+    container_name: mosquitto
+#    image: arm32v6/eclipse-mosquitto:2.0.16
+    image: damianmoore/mosquitto-arm32v6
+    environment:
+      - TZ=Europe/Madrid
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    networks:
+      - edge-net
+    volumes:
+      - $PWD/infra/Mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - $PWD/infra/Mosquitto/data:/mosquitto/data
+      - $PWD/infra/Mosquitto/log:/mosquitto/log
+
+#
+# Configuración de InfluxDB.
+#
+# influx setup --name myinfluxdb2 --host http://localhost:8086 \
+#  -u admin -p admin54321 -o my-org \
+#  -b my-bucket -t my-token -r 0 -f
+#
+  influxDB:
+    container_name: influxDB
+    image: arm32v7/influxdb
+    environment:
+      - TZ=Europe/Madrid
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=root
+      - DOCKER_INFLUXDB_INIT_PASSWORD=secret-password
+      - DOCKER_INFLUXDB_INIT_ORG=org-tfm
+      - DOCKER_INFLUXDB_INIT_BUCKET=bucket-tfm
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=6_nXNZk2yq1wvz45j6XM5J75X25OXRXW68QgIOCG7-QgFqwc5MJLRwUHPriHfh4_kggcZdvbCGfzBiFV2kEnFQ==
+
+
+
+    ports:
+      - "8086:8086"
+    networks:
+      - edge-net
+    volumes:
+      - $PWD/infra/influxdb/data:/var/lib/influxdb2
+      - $PWD/infra/influxdb/config:/etc/influxdb2      
+
+
+volumes:
+  edge-data:
+
+networks:
+  edge-net:
+  platformiot:

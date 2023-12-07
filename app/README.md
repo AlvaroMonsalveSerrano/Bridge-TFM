@@ -3,12 +3,9 @@
 
 ## Introducción
 
-Ejemplo de creación de una plantilla para un microservicio desarrollado en Python con la librería Flask.
+Aplicación para el envío de mensajes a la placa controladora a travéx del Broker MQTT Mosquitto
 
-Todo el código definido en el proyecto tiene como objetivo describir elementos básicos necesarios
-con una finalidad didáctica.
-
-## Creación
+## Creación entorno de desarrollo
 
     1.- Creación del entorno virtual.
       1.1.- Creación del entorno: $>virtualenv -p python3.6 .venv
@@ -50,37 +47,37 @@ Para probar los endpoint:
 curl http://localhost:5000/
 curl http://localhost:5000/readiness
 curl http://localhost:5000/liveness
-curl --header "Content-Type: application/json" --request POST \
-     --data '{"name":"xyz1", "operation":"+", "operator":"20"}' \
-     http://localhost:5000/use_case_example
+curl http://127.0.0.1:6060/alarm1
+curl http://127.0.0.1:6060/alarm2
+curl http://127.0.0.1:6060/alarm3
 ```
 
 ## Docker 
 
 1.- Creación de la imagen. Operación **build** del fichero Makefile.
 ``` 
-docker image build -t alvaroms/template-microservice:v1.0 .
+docker image build -t alvaroms/tfm:v1.0
 
 >make build
 ```
 
 2.- Arrancar el contenedor. Operación **run** del fichero Makefile.
 ``` 
-docker container run -d --name template-microservice -p 6060:80 alvaroms/template-microservice:v1.0
+docker container run -d --name tfm-app -p 6060:80 alvaroms/tfm:v1.0
 
 >make run
 ```
 
 3.- Entrar en la consola del contenedor. Operación **exec** del fichero Makefile.
 ``` 
-docker container exec -it template-microservice /bin/sh
+docker container exec -it tfm-app /bin/sh
 
 >make exec
 ```
 
 4.- Visualizar los logs del contenedor. Operación **logs** del fichero Makefile.
 ``` 
-docker container logs template-microservice
+docker container logs tfm-app
 
 > make logs
 ```
@@ -98,8 +95,5 @@ Para probar los endpoints de la aplicación arrancada en el contenedor, se puede
 curl http://localhost:6060/
 curl http://localhost:6060/liveness
 curl http://localhost:6060/rediness
-curl --header "Content-Type: application/json" --request POST \
-     --data '{"name":"xyz1", "operation":"+", "operator":"20"}' \
-     http://localhost:6060/use_case_example
 ```
 

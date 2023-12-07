@@ -8,7 +8,7 @@ build:
 
 .PHONY: run
 run:
-	docker container run -d --name tfm-local -p 6060:80 alvaroms/tfm:v1.0
+	docker container run -d --name tfm-local -p 6060:80 --env IP_BRIDGE=192.168.1.158 alvaroms/tfm:v1.0
 
 .PHONY: exec
 exec:
@@ -18,6 +18,13 @@ exec:
 logs:
 	docker container logs tfm-local
 
+.PHONY: stopc
+stopc:
+	docker container stop tfm-local
+
+.PHONY: rmc
+rmc:
+	docker container rm tfm-local
 
 .PHONY: all
 all:  build run

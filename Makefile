@@ -53,8 +53,12 @@ build:
 	docker-compose -f infra-dc.yml -p miPrototipo build
 
 .PHONY: up
-up:
+upb:
 	docker-compose -f infra-dc.yml -p miPrototipo up -d --force-recreate
+
+.PHONY: upu
+upp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform up -d --force-recreate	
 
 .PHONY: start
 start:
@@ -71,8 +75,13 @@ restart:
 
 # Borra solo los contenedores, no borra los volúmenes.
 .PHONY: down
-down:
+downb:
 	docker-compose -f infra-dc.yml -p miPrototipo down 
+
+# Borra solo los contenedores, no borra los volúmenes.
+.PHONY: downp
+downp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform down 	
 
 # Borrar los volumenes de datos.
 .PHONY: destroy
@@ -101,8 +110,8 @@ logs-influxDB:
 
 .PHONY: logs-grafanaui
 logs-grafanaui:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f grafanaui	
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform logs --tail=100 -f grafanaui	
 
 .PHONY: logs-app-compose
 logs-app-compose:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f app		
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform logs --tail=100 -f app		

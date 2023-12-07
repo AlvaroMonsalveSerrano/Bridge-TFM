@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+
+  grafanaui:
+    container_name: grafanaui
+    image: grafana/grafana-enterprise
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+    networks:
+      - platformiot
+
+    volumes:
+      - $PWD/infra/grafana/data:/var/lib/grafana
+
+    user: "0"  
+
+  app:
+    container_name: app 
+    image: alvaroms/tfm:v1.0
+    ports:
+      - "6060:80"
+
+    environment:
+      - IP_BRIDGE=192.168.1.158  
+
+    networks:
+      - platformiot
+
+volumes:
+  platform-data:
+
+networks:
+  platformiot:

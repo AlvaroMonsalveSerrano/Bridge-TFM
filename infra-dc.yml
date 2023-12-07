@@ -63,35 +63,35 @@ services:
       - $PWD/infra/influxdb/data:/var/lib/influxdb2
       - $PWD/infra/influxdb/config:/etc/influxdb2      
 
-  grafanaui:
-    container_name: grafanaui
-    image: grafana/grafana-enterprise
-    restart: unless-stopped
-    ports:
-      - "3000:3000"
-
-    networks:
-      - edge-net
-      - platformiot
-
-    volumes:
-      - $PWD/infra/grafana/data:/var/lib/grafana
-
-    user: "0"  
-
-  app:
-    container_name: app 
-    image: alvaroms/tfm:v1.0
-    ports:
-      - "6060:80"
-
-    networks:
-      - edge-net
-      - platformiot
+#  grafanaui:
+#    container_name: grafanaui
+#    image: grafana/grafana-enterprise
+#    restart: unless-stopped
+#    ports:
+#      - "3000:3000"
+#
+#    networks:
+#      - edge-net
+#      - platformiot
+#
+#    volumes:
+#      - $PWD/infra/grafana/data:/var/lib/grafana
+#
+#    user: "0"  
+#
+#  app:
+#    container_name: app 
+#    image: alvaroms/tfm:v1.0
+#    ports:
+#      - "6060:80"
+#
+#    networks:
+#      - edge-net
+#      - platformiot
 
 volumes:
   edge-data:
 
 networks:
   edge-net:
-  platformiot:
+#  platformiot:

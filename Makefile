@@ -56,9 +56,13 @@ build:
 upb:
 	docker-compose -f infra-dc.yml -p miPrototipo up -d --force-recreate
 
-.PHONY: upu
+.PHONY: upp
 upp:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform up -d --force-recreate	
+
+.PHONY: upb
+upb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge up -d --force-recreate
 
 .PHONY: start
 start:
@@ -83,6 +87,12 @@ downb:
 downp:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform down 	
 
+# Borra solo los contenedores, no borra los volúmenes.
+.PHONY: downb
+downb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge down
+
+
 # Borrar los volumenes de datos.
 .PHONY: destroy
 destroy:
@@ -103,6 +113,12 @@ logs-nodered:
 .PHONY: logs-mosquitto
 logs-mosquitto:
 	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f mosquitto
+
+.PHONY: logs-mosquitto-b
+logs-mosquitto-b:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge logs --tail=100 -f mosquitto	
+
+
 
 .PHONY: logs-influxDB
 logs-influxDB:

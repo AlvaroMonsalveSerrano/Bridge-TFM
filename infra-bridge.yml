@@ -18,7 +18,7 @@ services:
     networks:
       - edge-net
     volumes:
-      - $PWD/infra/nodered:/data
+      - $PWD/infrabridge/nodered:/data
 
   mosquitto:
     container_name: mosquitto
@@ -32,9 +32,9 @@ services:
     networks:
       - edge-net
     volumes:
-      - $PWD/infra/Mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
-      - $PWD/infra/Mosquitto/data:/mosquitto/data
-      - $PWD/infra/Mosquitto/log:/mosquitto/log
+      - $PWD/infrabridge/Mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - $PWD/infrabridge/Mosquitto/data:/mosquitto/data
+      - $PWD/infrabridge/Mosquitto/log:/mosquitto/log
 
 #
 # Configuración de InfluxDB.
@@ -55,20 +55,16 @@ services:
       - DOCKER_INFLUXDB_INIT_BUCKET=bucket-tfm
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=6_nXNZk2yq1wvz45j6XM5J75X25OXRXW68QgIOCG7-QgFqwc5MJLRwUHPriHfh4_kggcZdvbCGfzBiFV2kEnFQ==
 
-
-
     ports:
       - "8086:8086"
     networks:
       - edge-net
     volumes:
-      - $PWD/infra/influxdb/data:/var/lib/influxdb2
-      - $PWD/infra/influxdb/config:/etc/influxdb2      
-
+      - $PWD/infrabridge/influxdb/data:/var/lib/influxdb2
+      - $PWD/infrabridge/influxdb/config:/etc/influxdb2      
 
 volumes:
   edge-data:
 
 networks:
   edge-net:
-  platformiot:

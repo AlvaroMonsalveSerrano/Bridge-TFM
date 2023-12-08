@@ -1,0 +1,331 @@
+[
+    {
+        "id": "32fa710f8ce72da8",
+        "type": "tab",
+        "label": "TFM",
+        "disabled": false,
+        "info": "Definición de los flujos de las operaciones del TFM.",
+        "env": []
+    },
+    {
+        "id": "c8b203d85105f0cf",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0bcf57a68d6eff7b",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "InfluxDB-Docker",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxDB:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "5aabf444e6d5a827",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "esp32/binomio1/oxigeno",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "43d12d9c539d0cf3"
+            ]
+        ]
+    },
+    {
+        "id": "17673061bbef68f8",
+        "type": "comment",
+        "z": "32fa710f8ce72da8",
+        "name": "Binomio1 Bombero1 Oxígeno",
+        "info": "Flujo de operaciones del binomio 1 para oxígeno.",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "57a43a4f01ec4c17",
+        "type": "mqtt out",
+        "z": "32fa710f8ce72da8",
+        "name": "BrokerMosquitto",
+        "topic": "bridge/binomio1/accion1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c8b203d85105f0cf",
+        "x": 540,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f69e0f744f083efa",
+        "type": "inject",
+        "z": "32fa710f8ce72da8",
+        "name": "NodeRed",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "NodeRed-Test",
+        "payloadType": "str",
+        "x": 200,
+        "y": 700,
+        "wires": [
+            [
+                "57a43a4f01ec4c17"
+            ]
+        ]
+    },
+    {
+        "id": "dd8f425e0807e9fb",
+        "type": "influxdb out",
+        "z": "32fa710f8ce72da8",
+        "influxdb": "0bcf57a68d6eff7b",
+        "name": "InfluxDB-Docker-Node",
+        "measurement": "binomio1",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "org-tfm",
+        "bucket": "bucket-tfm",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "43d12d9c539d0cf3",
+        "type": "change",
+        "z": "32fa710f8ce72da8",
+        "name": "Binomio1-Bombero1-Oxigeno",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fields.oxigeno",
+                "pt": "msg",
+                "to": "$number(msg.payload)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "tags.bombero1",
+                "pt": "msg",
+                "to": "Pablo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$append(fields, tags)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 200,
+        "wires": [
+            [
+                "c6065e70938e7804",
+                "dd8f425e0807e9fb"
+            ]
+        ]
+    },
+    {
+        "id": "c6065e70938e7804",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "TestChange",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "35b62fed19fd5a94",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "4af52783de998006"
+            ]
+        ]
+    },
+    {
+        "id": "4af52783de998006",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ddfb0c033952a7d6",
+        "type": "comment",
+        "z": "32fa710f8ce72da8",
+        "name": "App Binomio1 (Alarm1, Alarm2)",
+        "info": "Flujo para el envío de una alarma1 al controlador \ndel binomio1",
+        "x": 250,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7344ebaf33b44248",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "daf178294969f807"
+            ]
+        ]
+    },
+    {
+        "id": "daf178294969f807",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "8f746c188815190f",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "6ebbe6f1ebfdb391"
+            ]
+        ]
+    },
+    {
+        "id": "6ebbe6f1ebfdb391",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 600,
+        "wires": []
+    }
+]

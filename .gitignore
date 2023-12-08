@@ -10,8 +10,22 @@ infra/Mosquitto/log/mosquitto.log
 
 infra/influxdb/data/engine/data/*
 
+infrabridge/influxdb/data/*
+
 # Mosquitto ===========================
 infra/Mosquitto/log/*
+
+infrabridge/Mosquitto/data/*
+infrabridge/Mosquitto/log/*
+
+
+# Nodered =============================
+infrabridge/nodered/lib/*
+infrabridge/nodered/node_modules/*
+infrabridge/nodered/flows_cred.json
+infrabridge/nodered/package.json
+infrabridge/nodered/package-lock.json
+infrabridge/nodered/settings.js
 
 # PYTHON ==============================
 

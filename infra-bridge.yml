@@ -48,12 +48,6 @@ services:
     image: arm32v7/influxdb
     environment:
       - TZ=Europe/Madrid
-      - DOCKER_INFLUXDB_INIT_MODE=setup
-      - DOCKER_INFLUXDB_INIT_USERNAME=root
-      - DOCKER_INFLUXDB_INIT_PASSWORD=secret-password
-      - DOCKER_INFLUXDB_INIT_ORG=org-tfm
-      - DOCKER_INFLUXDB_INIT_BUCKET=bucket-tfm
-      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=6_nXNZk2yq1wvz45j6XM5J75X25OXRXW68QgIOCG7-QgFqwc5MJLRwUHPriHfh4_kggcZdvbCGfzBiFV2kEnFQ==
 
     ports:
       - "8086:8086"

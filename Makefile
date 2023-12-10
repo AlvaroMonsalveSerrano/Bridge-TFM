@@ -48,14 +48,18 @@ logs-app:
 ##  =============
 ##  =============   DOCKER COMPOSE 
 ##  =============
-.PHONY: build 
-build:
-	docker-compose -f infra-dc.yml -p miPrototipo build
 
-.PHONY: up
-upb:
-	docker-compose -f infra-dc.yml -p miPrototipo up -d --force-recreate
+## build
+.PHONY: buildb
+buildb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge build
 
+.PHONY: buildp
+buildp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform build
+
+
+## UP
 .PHONY: upp
 upp:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform up -d --force-recreate	
@@ -64,70 +68,101 @@ upp:
 upb:
 	docker-compose -f infra-bridge.yml -p miPrototipoBridge up -d --force-recreate
 
-.PHONY: start
-start:
-	docker-compose -f infra-dc.yml -p miPrototipo start 
+.PHONY: upb-bbdd
+upb-bbdd:
+	docker exec influxDB influx -execute 'create database TFM'
+	
 
-.PHONY: stop
-stop:
-	docker-compose -f infra-dc.yml -p miPrototipo stop 	
+## start
+.PHONY: startb
+startb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge start 
 
-.PHONY: restart
-restart:
-	docker-compose -f infra-dc.yml -p miPrototipo stop 	
-	docker-compose -f infra-dc.yml -p miPrototipo up -d
+.PHONY: startp
+startp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform start 
 
+
+## stop
+.PHONY: stopb
+stopb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge stop 	
+
+.PHONY: stopp
+stopp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform stop
+
+
+#restart
+.PHONY: restartb
+restartb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge stop 	
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge up -d
+
+.PHONY: restartp
+restartp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform stop 	
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform up -d	
+
+
+# down
 # Borra solo los contenedores, no borra los volúmenes.
-.PHONY: down
+.PHONY: downb
 downb:
-	docker-compose -f infra-dc.yml -p miPrototipo down 
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge down 
 
 # Borra solo los contenedores, no borra los volúmenes.
 .PHONY: downp
 downp:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform down 	
 
-# Borra solo los contenedores, no borra los volúmenes.
-.PHONY: downb
-downb:
-	docker-compose -f infra-bridge.yml -p miPrototipoBridge down
 
 
+# destroy
 # Borrar los volumenes de datos.
-.PHONY: destroy
-destroy:
-	docker-compose -f infra-dc.yml -p miPrototipo down -v 	
+.PHONY: destroyp
+destroyp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform down -v 	
 
-.PHONY: ps
-ps:
-	docker-compose -f infra-dc.yml -p miPrototipo ps  	
+.PHONY: destroyb
+destroyb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge down -v 
 
-.PHONY: logs
-logs:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f 
 
+
+#ps
+.PHONY: psp
+psp:
+	docker-compose -f infra-platform.yml -p miPrototipoPlatform ps  	
+
+.PHONY: psb
+psb:
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge ps  
+
+
+
+#logs Bridge
 .PHONY: logs-nodered
 logs-nodered:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f nodered
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge logs --tail=100 -f nodered
+
 
 .PHONY: logs-mosquitto
 logs-mosquitto:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f mosquitto
-
-.PHONY: logs-mosquitto-b
-logs-mosquitto-b:
 	docker-compose -f infra-bridge.yml -p miPrototipoBridge logs --tail=100 -f mosquitto	
-
 
 
 .PHONY: logs-influxDB
 logs-influxDB:
-	docker-compose -f infra-dc.yml -p miPrototipo logs --tail=100 -f influxDB	
+	docker-compose -f infra-bridge.yml -p miPrototipoBridge logs --tail=100 -f influxDB	
 
+
+
+# logs Platform
 .PHONY: logs-grafanaui
 logs-grafanaui:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform logs --tail=100 -f grafanaui	
 
-.PHONY: logs-app-compose
-logs-app-compose:
+.PHONY: logs-app
+logs-app:
 	docker-compose -f infra-platform.yml -p miPrototipoPlatform logs --tail=100 -f app		

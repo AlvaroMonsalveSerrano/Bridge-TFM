@@ -16,6 +16,16 @@ Para operar con Influx DB desde NodeRed es necesario instalar un módulo para co
 URL: https://flowfuse.com/blog/2023/07/connect-node-red-to-influxdb/
 
 
++ Muestra la versión de InfluxDB
+docker exec influxDB influx -version
+
++ Muestra las base de datos existentes
+docker exec influxDB influx -execute 'SHOW DATABASES'
+
++ Creación de la base de datos.
+docker exec influxDB influx -execute 'create database TFM'
+
+
 ## Mosquitto.
 
 Para la realización de las pruebas, es necesario utilizar un cliente para realizar la lectura de las entradas 

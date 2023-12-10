@@ -27,6 +27,14 @@ infrabridge/nodered/package.json
 infrabridge/nodered/package-lock.json
 infrabridge/nodered/settings.js
 
+
+# Grafana =============================
+infrabridge/grafana/data/alerting/*
+infrabridge/grafana/data/csv/*
+infrabridge/grafana/data/plugins/*
+infrabridge/grafana/data/png/*
+infraplatform/grafana/data/alerting/1/*
+
 # PYTHON ==============================
 
 # Byte-compiled / optimized / DLL files

@@ -13,7 +13,7 @@ services:
       - platformiot
 
     volumes:
-      - $PWD/infra/grafana/data:/var/lib/grafana
+      - $PWD/infraplatform/grafana/data:/var/lib/grafana
 
     user: "0"  
 

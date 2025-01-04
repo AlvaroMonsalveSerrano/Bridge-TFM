@@ -24,7 +24,7 @@ services:
       - "6060:80"
 
     environment:
-      - IP_BRIDGE=192.168.1.158  
+      - IP_BRIDGE=192.168.1.174  
 
     networks:
       - platformiot

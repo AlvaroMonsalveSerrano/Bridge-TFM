@@ -1554,3 +1554,148 @@
 1701544726: Client nodered_316a2578f4f45101 disconnected.
 1701544726: mosquitto version 2.0.18 terminating
 1701544726: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701690100: mosquitto version 2.0.18 starting
+1701690100: Config loaded from /mosquitto/config/mosquitto.conf.
+1701690100: Opening ipv4 listen socket on port 1883.
+1701690100: mosquitto version 2.0.18 running
+1701690104: New connection from 172.18.0.2:46454 on port 1883.
+1701690104: New client connected from 172.18.0.2:46454 as nodered_990408d583db893d (p1, c1, k60).
+1701690408: New connection from 192.168.1.138:57632 on port 1883.
+1701690408: New client connected from 192.168.1.138:57632 as ESP8266Client_1 (p2, c1, k15).
+1701690719: New connection from 192.168.1.138:54781 on port 1883.
+1701690719: Client ESP8266Client_1 already connected, closing old connection.
+1701690719: New client connected from 192.168.1.138:54781 as ESP8266Client_1 (p2, c1, k15).
+1701690905: New connection from 192.168.1.138:64658 on port 1883.
+1701690905: Client ESP8266Client_1 already connected, closing old connection.
+1701690905: New client connected from 192.168.1.138:64658 as ESP8266Client_1 (p2, c1, k15).
+1701691099: New connection from 192.168.1.138:61063 on port 1883.
+1701691099: Client ESP8266Client_1 already connected, closing old connection.
+1701691099: New client connected from 192.168.1.138:61063 as ESP8266Client_1 (p2, c1, k15).
+1701691149: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701691237: New connection from 192.168.1.138:65497 on port 1883.
+1701691237: New client connected from 192.168.1.138:65497 as ESP8266Client_1 (p2, c1, k15).
+1701691281: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701691283: New connection from 192.168.1.138:65498 on port 1883.
+1701691286: New client connected from 192.168.1.138:65498 as ESP8266Client_1 (p2, c1, k15).
+1701691576: New connection from 172.18.0.6:44789 on port 1883.
+1701691576: New client connected from 172.18.0.6:44789 as Client MQTT (p2, c1, k60).
+1701691576: Client Client MQTT closed its connection.
+1701691618: New connection from 172.18.0.6:50525 on port 1883.
+1701691618: New client connected from 172.18.0.6:50525 as Client MQTT (p2, c1, k60).
+1701691618: Client Client MQTT closed its connection.
+1701691651: New connection from 172.18.0.6:46831 on port 1883.
+1701691651: New client connected from 172.18.0.6:46831 as Client MQTT (p2, c1, k60).
+1701691651: Client Client MQTT closed its connection.
+1701691900: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701693429: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701693701: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701695502: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701696027: New connection from 192.168.1.138:53122 on port 1883.
+1701696027: New client connected from 192.168.1.138:53122 as ESP8266Client_1 (p2, c1, k15).
+1701696078: New connection from 192.168.1.138:59432 on port 1883.
+1701696078: Client ESP8266Client_1 already connected, closing old connection.
+1701696078: New client connected from 192.168.1.138:59432 as ESP8266Client_1 (p2, c1, k15).
+1701696216: New connection from 172.18.0.6:47285 on port 1883.
+1701696216: New client connected from 172.18.0.6:47285 as Client MQTT (p2, c1, k60).
+1701696216: Client Client MQTT closed its connection.
+1701696224: New connection from 172.18.0.6:57857 on port 1883.
+1701696224: New client connected from 172.18.0.6:57857 as Client MQTT (p2, c1, k60).
+1701696224: Client Client MQTT disconnected.
+1701696231: New connection from 172.18.0.6:50971 on port 1883.
+1701696231: New client connected from 172.18.0.6:50971 as Client MQTT (p2, c1, k60).
+1701696231: Client Client MQTT closed its connection.
+1701696267: New connection from 172.18.0.6:58783 on port 1883.
+1701696267: New client connected from 172.18.0.6:58783 as Client MQTT (p2, c1, k60).
+1701696267: Client Client MQTT closed its connection.
+1701696693: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701697303: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701697657: New connection from 192.168.1.138:58430 on port 1883.
+1701697657: New client connected from 192.168.1.138:58430 as ESP8266Client_1 (p2, c1, k15).
+1701699063: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701699104: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701700905: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701702706: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701704507: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701704526: mosquitto version 2.0.18 terminating
+1701704526: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701766280: mosquitto version 2.0.18 starting
+1701766280: Config loaded from /mosquitto/config/mosquitto.conf.
+1701766280: Opening ipv4 listen socket on port 1883.
+1701766280: mosquitto version 2.0.18 running
+1701766284: New connection from 172.18.0.5:48074 on port 1883.
+1701766284: New client connected from 172.18.0.5:48074 as nodered_faacb28047ceec54 (p1, c1, k60).
+1701766580: New connection from 192.168.1.138:60202 on port 1883.
+1701766580: New client connected from 192.168.1.138:60202 as ESP8266Client_1 (p2, c1, k15).
+1701766814: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701766950: New connection from 192.168.1.100:56037 on port 1883.
+1701766950: New client connected from 192.168.1.100:56037 as ESP8266Client_1 (p2, c1, k15).
+1701766986: Client ESP8266Client_1 closed its connection.
+1701766993: New connection from 192.168.1.145:56038 on port 1883.
+1701766993: New client connected from 192.168.1.145:56038 as ESP8266Client_1 (p2, c1, k15).
+1701768014: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701768032: New connection from 192.168.1.145:56041 on port 1883.
+1701768032: New client connected from 192.168.1.145:56041 as ESP8266Client_1 (p2, c1, k15).
+1701768081: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701768248: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701769882: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701771146: Client nodered_faacb28047ceec54 disconnected.
+1701771146: New connection from 172.18.0.5:47416 on port 1883.
+1701771146: New client connected from 172.18.0.5:47416 as nodered_63e95411cbf31cad (p1, c1, k60).
+1701771234: New connection from 192.168.1.145:51429 on port 1883.
+1701771234: New client connected from 192.168.1.145:51429 as ESP8266Client_1 (p2, c1, k15).
+1701771683: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701772652: Client ESP8266Client_1 has exceeded timeout, disconnecting.
+1701773484: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701775285: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701777086: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701778887: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701780688: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701782489: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701784290: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701786091: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701787892: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701789693: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701791494: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701793295: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701795096: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701796897: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701798698: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701799186: mosquitto version 2.0.18 terminating
+1701799186: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701978776: mosquitto version 2.0.18 starting
+1701978776: Config loaded from /mosquitto/config/mosquitto.conf.
+1701978776: Opening ipv4 listen socket on port 1883.
+1701978776: mosquitto version 2.0.18 running
+1701978780: New connection from 172.21.0.4:40046 on port 1883.
+1701978780: New client connected from 172.21.0.4:40046 as nodered_8597f54819f8f0c4 (p1, c1, k60).
+1701978791: Client nodered_8597f54819f8f0c4 disconnected.
+1701978791: mosquitto version 2.0.18 terminating
+1701978791: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701978838: mosquitto version 2.0.18 starting
+1701978838: Config loaded from /mosquitto/config/mosquitto.conf.
+1701978838: Opening ipv4 listen socket on port 1883.
+1701978838: mosquitto version 2.0.18 running
+1701978840: New connection from 172.23.0.3:58050 on port 1883.
+1701978840: New client connected from 172.23.0.3:58050 as nodered_4fee5bc179468878 (p1, c1, k60).
+1701978861: mosquitto version 2.0.18 terminating
+1701978861: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701978956: mosquitto version 2.0.18 starting
+1701978956: Config loaded from /mosquitto/config/mosquitto.conf.
+1701978956: Opening ipv4 listen socket on port 1883.
+1701978956: mosquitto version 2.0.18 running
+1701978957: New connection from 172.25.0.4:47362 on port 1883.
+1701978957: New client connected from 172.25.0.4:47362 as nodered_759e045df0e5c888 (p1, c1, k60).
+1701978963: Client nodered_759e045df0e5c888 disconnected.
+1701978963: mosquitto version 2.0.18 terminating
+1701978963: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701980330: mosquitto version 2.0.18 starting
+1701980330: Config loaded from /mosquitto/config/mosquitto.conf.
+1701980330: Opening ipv4 listen socket on port 1883.
+1701980330: mosquitto version 2.0.18 running
+1701980332: New connection from 172.27.0.2:39236 on port 1883.
+1701980332: New client connected from 172.27.0.2:39236 as nodered_9d19996479b71246 (p1, c1, k60).
+1701982131: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701983932: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701985733: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1701987001: mosquitto version 2.0.18 terminating
+1701987001: Saving in-memory database to /mosquitto/data//mosquitto.db.

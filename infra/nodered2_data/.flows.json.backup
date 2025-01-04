@@ -2690,5 +2690,43 @@
         "x": 550,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "8f746c188815190f",
+        "type": "mqtt in",
+        "z": "32fa710f8ce72da8",
+        "name": "",
+        "topic": "app/binomio1/alarm3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c8b203d85105f0cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "6ebbe6f1ebfdb391"
+            ]
+        ]
+    },
+    {
+        "id": "6ebbe6f1ebfdb391",
+        "type": "debug",
+        "z": "32fa710f8ce72da8",
+        "name": "Test_Alarm3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 600,
+        "wires": []
     }
 ]

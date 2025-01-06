@@ -2,3 +2,5 @@ boto3
 dataclasses
 Flask
 paho-mqtt
+influxdb
+influxdb_client

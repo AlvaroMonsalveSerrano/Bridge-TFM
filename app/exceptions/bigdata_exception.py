@@ -1,0 +1,3 @@
+
+class BigDataException(Exception):
+    pass

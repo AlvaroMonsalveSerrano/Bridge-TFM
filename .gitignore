@@ -2,6 +2,9 @@
 
 .venv
 
+.vscode/
+*.csv
+
 infra/Mosquitto/log/mosquitto.log
 *.log
 

@@ -2,6 +2,29 @@
 # Makefile. Definición del fichero makefile para trabajar exclusivamente con el app 
 # Python utilizando Python.
 #
+
+
+##  ==========================================
+##  =============   APP PYTHON   =============
+##  ==========================================
+.PHONY: create-venv
+create-venv:
+	virtualenv .venv -p python3
+# source .venv/bin/activate
+
+.PHONY: rm-venv
+rm-venv:
+	rm -rf .venv
+
+.PHONY: install-library
+install-library:
+	pip3 install -r requirements.txt
+
+
+
+##  ========================================================
+##  =============   APP OPERACIÓN CON DOCKER   =============
+##  ========================================================
 .PHONY: build
 build:
 	docker image build -t alvaroms/tfm:v1.0 .

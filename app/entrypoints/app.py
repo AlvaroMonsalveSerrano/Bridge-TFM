@@ -18,7 +18,7 @@ import uuid
 import logging
 
 from flask import Flask, jsonify, request, current_app
-from services import app_service 
+from services import app_service, bigdata_service 
 from exceptions.services_exception import ServiceException
 
 
@@ -123,6 +123,20 @@ def doAlarm3():
         code_result = 510        
 
     return jsonify(response_result), code_result
+
+
+
+@app.route("/bigdata", methods=['GET'])
+def bigdata():
+    """
+    Big Data entrypoint.
+    :return: str
+    """
+    current_app.logger.info(f"[*] /bigdata")
+    bigdata_service.read_data_from_bridge()
+    return 'Ok', 200
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -8,6 +8,8 @@
 infra/Mosquitto/log/mosquitto.log
 *.log
 
+configuration.ini
+
 # InfluxDB ============================
 *tsl
 

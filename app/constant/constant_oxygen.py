@@ -6,9 +6,8 @@ import helper.configuration_parser_helper as configHelper
 #
 # CONSULTAS DE NEGOCIO
 # 
-QUERY = 'SELECT * FROM oxigeno'
+QUERY_OXYGEN = 'SELECT * FROM oxigeno'
 METRIC_NAME_OXYGEN = 'oxigeno'
-
 
 #
 # CONSTANTES DE PROCESAMIENTO

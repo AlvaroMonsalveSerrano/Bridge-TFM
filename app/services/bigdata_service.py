@@ -22,6 +22,7 @@ def read_data_from_bridge() -> None:
     """
     La función read_data_from_bridge define la funcionalidad de la lectura de las 
     mediciones de InfluxDB.
+    :raise -> BigDataException
     """
 
     HOST = configHelper.INFLUXDB_HOST

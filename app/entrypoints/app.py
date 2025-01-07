@@ -132,9 +132,20 @@ def bigdata():
     Big Data entrypoint.
     :return: str
     """
-    current_app.logger.info(f"[*] /bigdata")
-    bigdata_service.read_data_from_bridge()
-    return 'Ok', 200
+
+    response_result = None
+    code_result = 0
+    try:
+        current_app.logger.info(f"[*] /bigdata")
+        bigdata_service.read_data_from_bridge()
+        response_result = {'result': 'OK'}
+        code_result = 200
+
+    except Exception as service_exception:    
+        response_result = {'result': 'KO', 'error': str(service_exception)}
+        code_result = 520        
+
+    return jsonify(response_result), code_result
 
 
 

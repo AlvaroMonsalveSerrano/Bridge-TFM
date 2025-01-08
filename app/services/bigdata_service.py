@@ -42,7 +42,6 @@ def read_data_from_bridge() -> None:
         # Oxigeno.
         resultOxygen: ResultSet = client.query(cteOxigeno.QUERY_OXYGEN)
         logging.info(f"[**] /read_data_from_bridge: {cteOxigeno.QUERY_OXYGEN}")
-
         oxygen_points = list(resultOxygen.get_points(measurement=cteOxigeno.METRIC_NAME_OXYGEN))
         csvHelper.create_oxygen_raw(oxygen_points)
 

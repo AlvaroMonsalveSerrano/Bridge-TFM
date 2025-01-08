@@ -27,11 +27,11 @@ install-library:
 ##  ========================================================
 .PHONY: build
 build:
-	docker image build -t alvaroms/tfm:v1.0 .
+	docker image build -t alvaroms/tfm:v2.0 .
 
 .PHONY: run
 run:
-	docker container run -d --name tfm-local -p 6060:80 --env IP_BRIDGE=192.168.1.158 alvaroms/tfm:v1.0
+	docker container run -d --name tfm-local -p 6060:80 --env IP_BRIDGE=192.168.1.158  -v /home/alvaro/data_csv:/data alvaroms/tfm:v2.0
 
 .PHONY: exec
 exec:

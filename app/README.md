@@ -35,6 +35,11 @@ export FLASK_ENV=development
 flask run
 ```
 
+Ejecutando en local desde la raíz del proyecto y con la variable de entorno con la ubicación de fichero de propiedades.
+```
+FLASK_APP=./app/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app/properties flask run
+```
+
 2.- Definiendo la variable de entorno de forma implícita.
 ```
 cd entrypoints/

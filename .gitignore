@@ -9,6 +9,7 @@ infra/Mosquitto/log/mosquitto.log
 *.log
 
 configuration.ini
+configuration_docker.ini
 
 # InfluxDB ============================
 *tsl

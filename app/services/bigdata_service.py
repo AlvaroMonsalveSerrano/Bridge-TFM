@@ -12,7 +12,7 @@ from influxdb import InfluxDBClient
 from influxdb.resultset import ResultSet
 
 import constant.constant_oxygen as cteOxigeno
-import constant.constact_temperature as cteTemperature
+import constant.constant_temperature as cteTemperature
 import constant.constant_humedad as cteHumidity
 
 import helper.csv_helper as csvHelper

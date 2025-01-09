@@ -18,7 +18,7 @@ import uuid
 import logging
 
 from flask import Flask, jsonify, request, current_app
-from services import app_service, bigdata_service 
+from services import app_service, bigdata_service, transform_service 
 from exceptions.services_exception import ServiceException
 
 
@@ -146,6 +146,51 @@ def bigdata():
         code_result = 520        
 
     return jsonify(response_result), code_result
+
+
+@app.route("/transform", methods=['GET'])
+def transform():
+    """
+    Transform entrypoint.
+    :return: str
+    """
+
+    response_result = None
+    code_result = 0
+    try:
+        current_app.logger.info(f"[*] /transform")
+        transform_service.transform_metric_data()
+        response_result = {'result': 'OK'}
+        code_result = 200
+
+    except Exception as service_exception:    
+        response_result = {'result': 'KO', 'error': str(service_exception)}
+        code_result = 530        
+
+    return jsonify(response_result), code_result
+
+
+@app.route("/gold", methods=['GET'])
+def gold():
+    """
+    Gold entrypoint.
+    :return: str
+    """
+
+    response_result = None
+    code_result = 0
+    try:
+        current_app.logger.info(f"[*] /gold")
+        transform_service.transform_to_gold_data()
+        response_result = {'result': 'OK'}
+        code_result = 200
+
+    except Exception as service_exception:    
+        response_result = {'result': 'KO', 'error': str(service_exception)}
+        code_result = 540        
+
+    return jsonify(response_result), code_result
+
 
 
 

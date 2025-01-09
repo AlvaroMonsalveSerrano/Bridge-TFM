@@ -35,10 +35,6 @@ export FLASK_ENV=development
 flask run
 ```
 
-Ejecutando en local desde la raíz del proyecto y con la variable de entorno con la ubicación de fichero de propiedades.
-```
-FLASK_APP=./app/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app/properties flask run
-```
 
 2.- Definiendo la variable de entorno de forma implícita.
 ```
@@ -46,15 +42,22 @@ cd entrypoints/
 FLASK_ENV=development FLASK_DEBUG=0 FLASK_APP=app.py flask run
 ```
 
+Ejecutando en local desde la raíz del proyecto y con la variable de entorno con la ubicación de fichero de propiedades.
+```
+FLASK_APP=./app/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app/properties flask run
+```
+
+
 Para probar los endpoint:
 
 ```
-curl http://localhost:5000/
-curl http://localhost:5000/readiness
-curl http://localhost:5000/liveness
+curl http://localhost:6060/
+curl http://localhost:6060/readiness
+curl http://localhost:6060/liveness
 curl http://127.0.0.1:6060/alarm1
 curl http://127.0.0.1:6060/alarm2
 curl http://127.0.0.1:6060/alarm3
+curl http://127.0.0.1:6060/bigdata
 ```
 
 ## Docker 
@@ -68,7 +71,7 @@ docker image build -t alvaroms/tfm:v1.0
 
 2.- Arrancar el contenedor. Operación **run** del fichero Makefile.
 ``` 
-docker container run -d --name tfm-app -p 6060:80 alvaroms/tfm:v1.0
+docker container run -d --name tfm-local -p 6060:80 --env IP_BRIDGE=192.168.1.158  -v /home/alvaro/data_csv:/data alvaroms/tfm:v2.0
 
 >make run
 ```

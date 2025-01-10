@@ -57,6 +57,17 @@ services:
       - $PWD/infrabridge/influxdb/data:/var/lib/influxdb2
       - $PWD/infrabridge/influxdb/config:/etc/influxdb2      
 
+
+  app:
+    container_name: app 
+    image: alvaroms/tfm-app-bridge:v1.0
+    ports:
+      - "6060:80"
+
+    networks:
+      - edge-net
+
+
 volumes:
   edge-data:
 

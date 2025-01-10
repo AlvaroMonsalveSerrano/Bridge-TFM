@@ -18,7 +18,7 @@ import uuid
 import logging
 
 from flask import Flask, jsonify, request, current_app
-from services import app_service, bigdata_service, transform_service 
+from services import app_service, bigdata_service, transform_service, machine_learning_service 
 from exceptions.services_exception import ServiceException
 
 
@@ -192,6 +192,26 @@ def gold():
     return jsonify(response_result), code_result
 
 
+# @app.route("/mlmodel", methods=['GET'])
+# def mlmodel():
+#     """
+#     Machine Learning Model entrypoint.
+#     :return: str
+#     """
+
+#     response_result = None
+#     code_result = 0
+#     try:
+#         current_app.logger.info(f"[*] /mlmodel")
+#         machine_learning_service.create_ml_model()
+#         response_result = {'result': 'OK'}
+#         code_result = 200
+
+#     except Exception as service_exception:    
+#         response_result = {'result': 'KO', 'error': str(service_exception)}
+#         code_result = 550        
+
+#     return jsonify(response_result), code_result
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 
 """
-El módulo bigdata_service.py define las operaciones de negocio 
+El módulo bigdata_service.py define las operaciones de negocio para las operaciones de 
+Big Data.
 """
 
 import os

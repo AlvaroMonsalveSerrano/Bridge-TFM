@@ -4,3 +4,6 @@ Flask
 paho-mqtt
 influxdb
 influxdb_client
+
+tensorflow-cpu
+pandas

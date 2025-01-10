@@ -5,6 +5,7 @@
 .vscode/
 *.csv
 
+csv/
 infra/Mosquitto/log/mosquitto.log
 *.log
 

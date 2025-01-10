@@ -184,7 +184,7 @@ def create_file_gold(filename_transform: str,
             next(csv_transform)
             for row in csv_transform:
                 time_oxy, value_oxy, time_temp, value_temp, time_hum, value_hum, *_= row
-                row = [time_oxy, value_oxy, value_temp, value_hum, __flag_ia_model__(value_temp, value_hum)]
+                row = [value_oxy, value_temp, value_hum, __flag_ia_model__(value_temp, value_hum)]
                 csv_gold.writerow(row)
 
         logging.info(f"[**] /create_file_gold: Fichero gold creado.")
@@ -211,7 +211,7 @@ def __flag_ia_model__(value_temp:str, value_hum:str) -> int:
         humidity = float(value_hum)
         result = 0
 
-        if temperature >= 100.0 and humidity >= 70.0:
+        if temperature >= 60.0 and humidity >= 40.0:
             result = 1
 
         return result

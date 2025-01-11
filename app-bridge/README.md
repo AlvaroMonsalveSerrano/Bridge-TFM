@@ -45,7 +45,9 @@ FLASK_ENV=development FLASK_DEBUG=0 FLASK_APP=./entrypoint/app.py flask run
 
 Ejecutando en local desde la raíz del proyecto y con la variable de entorno con la ubicación de fichero de propiedades.
 ```
-FLASK_APP=./app/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app/properties flask run
+FLASK_APP=./app-bridge/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app-bridge/properties flask run
+FLASK_ENV=development FLASK_DEBUG=0 FLASK_APP=./app-bridge/entrypoints/app.py FILE_CONFIG_PATH=/home/alvaro/Documentos/Master-IOT/TFM/Prototipo/app-bridge/properties flask run
+
 ```
 
 
@@ -55,7 +57,7 @@ Para probar los endpoint:
 curl http://localhost:6060/
 curl http://localhost:6060/readiness
 curl http://localhost:6060/liveness
-curl http://127.0.0.1:6060/ia
+curl "http://localhost:6060/ia?temperatura=10&humedad=20"
 ```
 
 ## Docker 
@@ -69,7 +71,7 @@ docker image build -t alvaroms/tfm-app-bridge:v1.0
 
 2.- Arrancar el contenedor. Operación **run** del fichero Makefile.
 ``` 
-docker container run -d --name tfm-local-bridge -p 6060:80 --env IP_BRIDGE=192.168.1.158  -v /home/alvaro/data_csv:/data alvaroms/tfm-app-bridge:v2.0
+docker container run -d --name tfm-local-bridge -p 6060:80 --env IP_BRIDGE=192.168.1.158  -v /home/alvaro/data-bridge:/data alvaroms/tfm-app-bridge:v2.0
 
 >make run
 ```

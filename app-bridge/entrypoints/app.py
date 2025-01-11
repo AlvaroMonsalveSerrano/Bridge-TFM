@@ -20,7 +20,7 @@ import logging
 
 from flask import Flask, jsonify, request, current_app
 
-import constant.constant_ia as cia
+import services.ia_service as ias
 
 app = Flask(__name__)
 
@@ -73,16 +73,42 @@ def ia():
         temperature = request.args.get('temperatura')
         humidity = request.args.get('humedad')
         current_app.logger.info(f"[*] /ia. Parámetros: temperatura={temperature} humedad={humidity}")
-        p_temperature = float(temperature)
-        p_humidity = float(humidity)
 
-        if p_temperature >= cia.LIMIT_TEMPERATURE and p_humidity >= cia.LIMIT_HUMIDITY:
-            result = '1'
+        result = ias.do_ia_service(temperature, humidity)
+        current_app.logger.info(f"[*] /ia. result: {result}")
 
     except Exception as ex:
         current_app.logger.info(f"[*] /ia. Exception: {str(ex)}")
 
     return result, 200
+
+@app.route("/iatemperature", methods=['GET'])
+def iatemperature():
+    try:
+        result = '0'
+        current_app.logger.info(f"[*] /iatemperature.")
+        result = ias.find_temperature()
+        current_app.logger.info(f"[*] /iatemperature. Result: {result}")
+
+    except Exception as ex:
+        current_app.logger.info(f"[*] /iatemperature. Exception: {str(ex)}")
+
+    return result, 200
+
+
+@app.route("/iahumidity", methods=['GET'])
+def iahumidity():
+    try:
+        result = '0'
+        current_app.logger.info(f"[*] /iahumidity.")
+        result = ias.find_humidity()
+        current_app.logger.info(f"[*] /iahumidity. Result: {result}")
+
+    except Exception as ex:
+        current_app.logger.info(f"[*] /iahumidity. Exception: {str(ex)}")
+
+    return result, 200
+
 
 
 if __name__ == '__main__':

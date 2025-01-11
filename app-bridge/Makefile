@@ -27,15 +27,15 @@ install-library:
 ##  ========================================================
 .PHONY: build
 build:
-	docker image build -t alvaroms/tfm-app-bridge:v1.0 .
+	docker image build -t alvaroms/tfm-app-bridge:v1.1 .
 
 .PHONY: run
 run:
-	docker container run -d --name tfm-local-bridge -p 6060:80  -v /home/alvaro/data_csv:/data alvaroms/tfm-app-bridge:v1.0
+	docker container run -d --name tfm-local-bridge -p 6060:80 --env FILE_CONFIG_PATH=/app -v /home/alvaro/data-bridge:/data alvaroms/tfm-app-bridge:v1.1
 
 .PHONY: exec
 exec:
-	docker container exec -it tfm-local /bin/sh
+	docker container exec -it tfm-local-bridge /bin/sh
 
 .PHONY: logs
 logs:

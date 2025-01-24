@@ -82,6 +82,27 @@ def ia():
 
     return result, 200
 
+@app.route("/ia2", methods=['GET'])
+def ia2():
+    """
+    IA entrypoint.
+    :return: str. '0' no hay riesgo; '1', si hay riesgo.
+    """
+
+    try:
+        result = '0'
+        temperature = request.args.get('temperatura')
+        humidity = request.args.get('humedad')
+        current_app.logger.info(f"[*] /ia. Parámetros: temperatura={temperature} humedad={humidity}")
+
+        result = ias.do_ia_service(temperature, humidity)
+        current_app.logger.info(f"[*] /ia. result: {result}")
+
+    except Exception as ex:
+        current_app.logger.info(f"[*] /ia. Exception: {str(ex)}")
+
+    return jsonify({'result': result}), 200
+
 @app.route("/iatemperature", methods=['GET'])
 def iatemperature():
     try:
@@ -95,6 +116,18 @@ def iatemperature():
 
     return result, 200
 
+@app.route("/iatemperature2", methods=['GET'])
+def iatemperature2():
+    try:
+        result = '0'
+        current_app.logger.info(f"[*] /iatemperature.")
+        result = ias.find_temperature()
+        current_app.logger.info(f"[*] /iatemperature. Result: {result}")
+
+    except Exception as ex:
+        current_app.logger.info(f"[*] /iatemperature. Exception: {str(ex)}")
+
+    return jsonify({'result': result}), 200
 
 @app.route("/iahumidity", methods=['GET'])
 def iahumidity():
@@ -109,7 +142,18 @@ def iahumidity():
 
     return result, 200
 
+@app.route("/iahumidity2", methods=['GET'])
+def iahumidity2():
+    try:
+        result = '0'
+        current_app.logger.info(f"[*] /iahumidity.")
+        result = ias.find_humidity()
+        current_app.logger.info(f"[*] /iahumidity. Result: {result}")
 
+    except Exception as ex:
+        current_app.logger.info(f"[*] /iahumidity. Exception: {str(ex)}")
+
+    return jsonify({'result': result}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

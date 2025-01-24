@@ -45,6 +45,10 @@ logs:
 stopc:
 	docker container stop tfm-local-bridge
 
+.PHONY: startc
+stopc:
+	docker container start tfm-local-bridge
+
 .PHONY: rmc
 rmc:
 	docker container rm tfm-local-bridge
